@@ -31,6 +31,70 @@ Api для организации работы бассейна
   docker-compose up
 ```
   Запускаем Postman и теституем)
+
+  ### API для работы с клиентами
+
+#### 1. GET getClients (/api/v0/pool/client/all)
+
+##### Описание 
+Получение списка клиентов бассейна
+
+##### Структура ответа
+```
+{[
+    "id": number,
+    "name": string
+]}
+```
+
+#### 2. GET getClient (/api/v0/pool/client/get)
+
+##### Описание
+Получение данных о клиенте 
+
+##### Входные данные
+```
+    id: number
+```
+
+##### Структура ответа
+```
+{
+    "id": number,
+    "name": string,
+    "phone": string,
+    "email": string
+}
+```
+
+#### 3. POST addClient (/api/v0/pool/client/add)
+
+##### Описание
+Добавление нового клиента
+
+##### Структура входных данных (body) 
+```
+{
+    "name": string,
+    "phone": string,
+    "email": string
+}    
+```
+
+#### 4. POST updateClient (/api/v0/pool/client/update)
+
+##### Описание
+Обновление данных о клиенте
+
+##### Структура входных данных (body)
+```
+{
+    "id": number
+    "name": string,
+    "phone": string,
+    "email": string
+}    
+```
   
 ### API для работы с записями
 
