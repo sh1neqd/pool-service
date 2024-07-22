@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path:
+
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  jpa:
+    open-in-view: false
+    database: POSTGRESQL
+    properties:
+      hibernate:
+        show_sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  main:
+    allow-circular-references: true
+
+pool:
+  working-hours:
+    start: "09:00"
+    end: "20:00"
